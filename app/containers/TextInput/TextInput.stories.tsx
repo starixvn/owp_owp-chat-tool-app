@@ -15,7 +15,7 @@ export default {
 
 const item = {
 	name: 'Rocket.Chat',
-	longText: 'https://open.rocket.chat/images/logo/android-chrome-512x512.png'
+	longText: ''
 };
 
 export const ShortAndLong = () => (

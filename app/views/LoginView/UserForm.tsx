@@ -81,9 +81,11 @@ const UserForm = () => {
 		}
 	}, [error?.error, failure, getValues, navigation]);
 
-	const showRegistrationButton =
+	// LOS: Currently disable register account
+	const showRegistrationButton = false;
+	/* const showRegistrationButton =
 		Accounts_RegistrationForm === 'Public' || (Accounts_RegistrationForm === 'Secret URL' && inviteLinkToken?.length);
-
+ */
 	const register = () => {
 		navigation.navigate('RegisterView', { title: workspaceDomain });
 	};
@@ -137,7 +139,8 @@ const UserForm = () => {
 				/>
 			</View>
 			<View style={styles.bottomContainer}>
-				{Accounts_PasswordReset && (
+				{/* {LOS: Disable reset password} */}
+				{false && (
 					<View style={styles.bottomContainerGroup}>
 						<Text style={[styles.bottomContainerText, { color: colors.fontSecondaryInfo }]}>{I18n.t('Forgot_password')}</Text>
 						<Button

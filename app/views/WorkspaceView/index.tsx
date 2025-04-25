@@ -58,11 +58,13 @@ const WorkspaceView = () => {
 		});
 	}, [navigation, workspaceDomain]);
 
-	const showRegistrationButton = !!(
+	/* const showRegistrationButton = !!(
 		!Accounts_iframe_enabled &&
 		(registrationForm === 'Public' || (registrationForm === 'Secret URL' && inviteLinkToken?.length))
-	);
+	); */
 
+	// LOS: Currently disable register account
+	const showRegistrationButton = false;
 	const login = () => {
 		if (Accounts_iframe_enabled) {
 			navigation.navigate('AuthenticationWebView', { url: server, authType: 'iframe' });

@@ -135,7 +135,7 @@ const NewServerView = ({ navigation }: INewServerViewProps) => {
 						...styles.onboardingImage,
 						marginTop
 					}}
-					source={require('../../static/images/logo_with_name.png')}
+					source={require('../../static/images/owp.png')}
 					contentFit='contain'
 				/>
 				<Text

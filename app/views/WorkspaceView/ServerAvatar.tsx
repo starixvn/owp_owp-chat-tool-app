@@ -28,14 +28,20 @@ interface IServerAvatar {
 	url: string;
 	image: string;
 }
-
+// LOS: Disable load image from server
+// LOS: Los image from static folder
 // TODO: missing skeleton
 const ServerAvatar = React.memo(({ url, image }: IServerAvatar) => {
 	const { colors } = useTheme();
 
 	return (
 		<View style={styles.container}>
-			{image && <Image style={[styles.image, { borderColor: colors.strokeLight }]} source={{ uri: `${url}/${image}` }} />}
+			{image && (
+				<Image
+					style={[styles.image, { borderColor: colors.strokeLight }]}
+					source={require('../../static/images/owp_no_name.png')}
+				/>
+			)}
 		</View>
 	);
 });

@@ -22,7 +22,7 @@ export interface IServerItem {
 	hasCheck?: boolean;
 }
 
-const defaultLogo = require('../../static/images/logo.png');
+const defaultLogo = require('../../static/images/owp.png');
 
 const ServerItem = React.memo(({ item, onPress, onLongPress, hasCheck }: IServerItem) => {
 	const { theme } = useTheme();

@@ -117,7 +117,7 @@ const Loading = (): React.ReactElement | null => {
 						]}
 					/>
 					<AnimatedImage
-						source={require('../../static/images/logo.png')}
+						source={require('../../static/images/owp.png')}
 						style={[styles.image, animatedScale]}
 						testID={LOADING_IMAGE_TEST_ID}
 						contentFit='contain'

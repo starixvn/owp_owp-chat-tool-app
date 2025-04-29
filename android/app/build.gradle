@@ -74,7 +74,8 @@ def jscFlavor = 'org.webkit:android-jsc:+'
 
 project.ext.react = [
     // bundleAssetName: "app.bundle",
-    iconFontNames: [ 'custom.ttf' ]
+    iconFontNames: [ 'custom.ttf' ],
+    enableHermes: true
 ]
 
 android {
@@ -84,7 +85,7 @@ android {
 
     namespace "chat.rocket.reactnative"
     defaultConfig {
-        applicationId "chat.rocket.reactnative"
+        applicationId "OWP.chat"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode VERSIONCODE as Integer
@@ -110,17 +111,10 @@ android {
     }
     buildTypes {
         release {
-             minifyEnabled false
-    shrinkResources false
-    proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-
-            signingConfig signingConfigs.release
-           
-           
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-
-            signingConfig signingConfigs.release
-            /*minifyEnabled enableProguardInReleaseBuilds*/
+            minifyEnabled false
+            shrinkResources false
+            //proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release  // Add this if you're signing the build
            
             firebaseCrashlytics {
                 nativeSymbolUploadEnabled true
@@ -146,7 +140,7 @@ android {
 dependencies {
     // The version of react-native is set by the React Native Gradle Plugin
     implementation("com.facebook.react:react-android")
-    implementation("com.facebook.react:flipper-integration")
+    //implementation("com.facebook.react:flipper-integration")
     implementation("com.android.installreferrer:installreferrer:2.2") 
 
     if (hermesEnabled.toBoolean()) {

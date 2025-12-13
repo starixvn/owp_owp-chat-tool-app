@@ -211,7 +211,7 @@
 		"jest-expo": "^50.0.4",
 		"jest-junit": "^16.0.0",
 		"otp.js": "1.2.0",
-		"patch-package": "8.0.0",
+		"patch-package": "8.0.1",
 		"prettier": "2.8.8",
 		"react-dom": "18.2.0",
 		"react-native-dotenv": "3.4.8",
